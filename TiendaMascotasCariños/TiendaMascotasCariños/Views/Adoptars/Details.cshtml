@@ -1,0 +1,50 @@
+﻿@model TiendaMascotasCariños.Models.Adoptar
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Adoptar</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Mascota.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Mascota.Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Usuario.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Usuario.Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TieneMascota)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TieneMascota)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CuantasMascotas)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CuantasMascotas)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.AdoptarID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

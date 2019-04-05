@@ -1,0 +1,52 @@
+﻿@model IEnumerable<TiendaMascotasCariños.Models.Adoptar>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Mascota.Nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Usuario.Nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TieneMascota)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CuantasMascotas)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Mascota.Nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Usuario.NombreCompleto)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TieneMascota)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CuantasMascotas)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.AdoptarID }) |
+            @Html.ActionLink("Details", "Details", new { id = item.AdoptarID }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.AdoptarID })
+            @Html.ActionLink("Calificar", "Create", "Calificars", new { id = item.AdoptarID }, new { @class = "btn btn-warning" })
+        </td>
+    </tr>
+}
+
+</table>

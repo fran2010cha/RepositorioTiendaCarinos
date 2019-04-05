@@ -1,0 +1,50 @@
+﻿@model TiendaMascotasCariños.Models.Calificar
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Calificar</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Adoptar.AdoptarID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Adoptar.AdoptarID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Comprar.MedioPago)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Comprar.MedioPago)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.calificacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.calificacion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Comentario)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Comentario)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.CalificarID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

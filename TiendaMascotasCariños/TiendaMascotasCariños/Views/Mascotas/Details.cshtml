@@ -1,0 +1,97 @@
+﻿@model TiendaMascotasCariños.Models.Mascota
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Mascota</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Raza.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Raza.Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tienda.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tienda.Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaNacimiento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaNacimiento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Color)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Color)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Genero)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Genero)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HistorialMascota)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HistorialMascota)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Estado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Estado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Precio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Precio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.imagenMascota)
+        </dt>
+
+        <dd>
+            <img width="80" height="80" src="@Url.Action("convertirImagen", "Mascotas", new {MascotaID = Model.MascotaID})" />
+        </dd>
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MascotaID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
